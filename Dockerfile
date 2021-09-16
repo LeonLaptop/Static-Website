@@ -1,4 +1,5 @@
-FROM nginx:alpine as web
-COPY . /usr/share/nginx/html
+FROM nginx
 
-EXPOSE 80
+COPY html /usr/share/nginx/html
+
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
